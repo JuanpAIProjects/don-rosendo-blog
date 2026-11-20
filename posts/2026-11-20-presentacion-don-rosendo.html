@@ -38,8 +38,12 @@
   .cta-box h2{margin-top:0}
   .cta-box p{color:var(--suave)}
   .cta{display:inline-block; background:var(--verde); color:#fff; font-weight:800; text-decoration:none; padding:13px 22px; border-radius:999px; margin-top:8px}
+  .volver{display:inline-flex; align-items:center; gap:7px; padding:8px 15px; border:1.5px solid rgba(255,255,255,.4); border-radius:999px; color:var(--blanco); text-decoration:none; font-weight:700; font-size:.92rem}
+  .volver:hover{border-color:var(--rosa); color:var(--rosa)}
+  .volver-top{margin:20px 0 2px}
+  .volver-bottom{margin:10px 0 4px}
   footer{background:var(--panel); color:var(--suave); margin-top:44px}
-  .footer-in{max-width:1080px; margin:0 auto; padding:24px 20px; font-size:.92rem}
+  .footer-in{max-width:1080px; margin:0 auto; padding:24px 20px 92px; font-size:.92rem}
   .footer-in a{color:var(--blanco)}
   @media (max-width:620px){ h1{font-size:1.8rem} }
 </style>
@@ -54,6 +58,7 @@
 </header>
 
 <main class="wrap">
+  <a class="volver volver-top" href="../index.html">← Volver al inicio</a>
   <div class="kicker">Presentación</div>
   <h1>Soy Don Rosendo: tu anfitrión para celebrar en Cholula y Puebla</h1>
   <div class="meta">
@@ -70,7 +75,7 @@
 
     <div class="video-box">
       <p>Así me presento</p>
-      <video controls preload="metadata" poster="../assets/video/2026-11-20-presentacion-don-rosendo-cover.jpg" src="../assets/video/2026-11-20-presentacion-don-rosendo.mp4"></video>
+      <video controls playsinline preload="metadata" poster="../assets/video/2026-11-20-presentacion-don-rosendo-poster.jpg" src="../assets/video/2026-11-20-presentacion-don-rosendo.mp4?v=5"></video>
     </div>
 
     <h2>Mi territorio: las 10 maneras</h2>
@@ -104,6 +109,7 @@
     <p>Nos vemos en la próxima fiesta. Trae hambre y buenos zapatos para bailar; del resto nos encargamos nosotros.</p>
     <p><b>— Don Rosendo</b></p>
   </article>
+  <a class="volver volver-bottom" href="../index.html">← Volver al inicio</a>
 </main>
 
 <footer>

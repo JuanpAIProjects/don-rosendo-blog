@@ -22,7 +22,11 @@
                      servicial; datos verificables; sin precios exactos ni
                      promesas de disponibilidad.
     {{VIDEO_BLOQUE}} Bloque «Míralo en video» si la pieza de la semana tiene
-                     video enlazado al blog; si no, se borra completo.
+                     video enlazado al blog; si no, se borra completo. El
+                     <video> lleva siempre: controls, playsinline (para que
+                     en iPhone se reproduzca dentro de la página),
+                     preload="metadata" y poster tomado de un cuadro de
+                     acción del propio video (nunca una tarjeta quieta).
 
   Tras crear el post: (1) agregar su entrada a posts.json (arriba de la
   lista), (2) agregar su tarjeta a index.html en #lista-posts, (3) empujar
@@ -75,8 +79,12 @@
   .cta{display:inline-flex; align-items:center; gap:9px; background:var(--verde); color:#fff; font-weight:800; text-decoration:none; padding:13px 22px; border-radius:999px; margin-top:8px; box-shadow:0 10px 24px rgba(0,0,0,.28); transition:transform .15s ease,filter .15s ease}
   .cta:hover{transform:translateY(-1px); filter:brightness(1.06)}
   .cta svg{flex:none}
+  .volver{display:inline-flex; align-items:center; gap:7px; padding:8px 15px; border:1.5px solid rgba(255,255,255,.4); border-radius:999px; color:var(--blanco); text-decoration:none; font-weight:700; font-size:.92rem}
+  .volver:hover{border-color:var(--rosa); color:var(--rosa)}
+  .volver-top{margin:20px 0 2px}
+  .volver-bottom{margin:10px 0 4px}
   footer{background:var(--panel); color:var(--suave); margin-top:44px; border-top:1px solid rgba(255,255,255,.08)}
-  .footer-in{max-width:1080px; margin:0 auto; padding:24px 20px; font-size:.92rem}
+  .footer-in{max-width:1080px; margin:0 auto; padding:24px 20px 92px; font-size:.92rem}
   .footer-in a{color:var(--blanco)}
   @media (max-width:620px){ h1{font-size:1.8rem} }
 </style>
@@ -91,6 +99,7 @@
 </header>
 
 <main class="wrap">
+  <a class="volver volver-top" href="../index.html">← Volver al inicio</a>
   <div class="kicker">{{TEMA}}</div>
   <h1>{{TITULO}}</h1>
   <div class="meta">
@@ -119,6 +128,7 @@
 
     <p><b>— Don Rosendo</b></p>
   </article>
+  <a class="volver volver-bottom" href="../index.html">← Volver al inicio</a>
 </main>
 
 <footer>
