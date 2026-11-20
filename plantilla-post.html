@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  PLANTILLA DE POST — LA LIBRETA DE DON ROSENDO (Grupo Santa Rosa)
+  ============================================================
+  El job semanal del blog NO usa este archivo en vivo: lo COPIA con el
+  nombre posts/AAAA-MM-DD-slug.html y reemplaza cada marcador {{...}}.
+
+  Marcadores:
+    {{TITULO}}       Título del artículo (también va en <title> y OG)
+    {{DESCRIPCION}}  Resumen de 1-2 frases (meta description y OG)
+    {{FECHA_ISO}}    Fecha en formato 2026-11-20
+    {{FECHA_LARGA}}  Fecha legible: 20 de noviembre de 2026
+    {{TEMA}}         Serie del artículo: Tips, Checklists, Datos reales,
+                     Salones, Hotel o Temporada
+    {{LECTURA}}      Tiempo de lectura, ej. "3 min de lectura"
+    {{SLUG}}         Nombre del archivo sin fecha
+    {{IMAGEN_HERO}}  Ruta de la imagen principal (../assets/img/...)
+    {{IMAGEN_HERO_ALT}} Texto alternativo de la imagen principal
+    {{CUERPO}}       El cuerpo del artículo en HTML (párrafos <p>, subtítulos
+                     <h2>, listas). Voz de Don Rosendo: elegante, pícara y
+                     servicial; datos verificables; sin precios exactos ni
+                     promesas de disponibilidad.
+    {{VIDEO_BLOQUE}} Bloque «Míralo en video» si la pieza de la semana tiene
+                     video enlazado al blog; si no, se borra completo.
+
+  Tras crear el post: (1) agregar su entrada a posts.json (arriba de la
+  lista), (2) agregar su tarjeta a index.html en #lista-posts, (3) empujar
+  los archivos de TEXTO por el procedimiento snapshot del conector de
+  GitHub; los binarios (imágenes/video) se suben por la web de GitHub.
+  El cierre de todo artículo: CTA de WhatsApp de ventas con el enlace de
+  blog (ya incluido abajo) + la palabra clave de la serie cuando aplique.
+  ============================================================
+-->
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITULO}} — La libreta de Don Rosendo</title>
+<meta name="description" content="{{DESCRIPCION}}">
+<meta property="og:title" content="{{TITULO}}">
+<meta property="og:description" content="{{DESCRIPCION}}">
+<meta property="og:type" content="article">
+<meta property="og:image" content="../assets/img/don-rosendo-oficial.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --navy:#1E1B3A; --rosa:#C2185B; --crema:#F6EFE3; --crema2:#EFE6D5; --tinta:#26223F; --suave:#5A5570 }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--crema); color:var(--tinta); font-family:'Archivo',system-ui,sans-serif; line-height:1.65}
+  a{color:var(--rosa)}
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px}
+  header{background:var(--navy); color:var(--crema)}
+  .header-in{max-width:1080px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:16px}
+  .header-in img{height:46px; border-radius:8px}
+  .header-in a{color:var(--crema); text-decoration:none; font-family:'Fraunces',serif; font-weight:900; font-size:1.15rem}
+  .kicker{margin:34px 0 8px; font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--rosa)}
+  h1{font-family:'Fraunces',serif; font-weight:900; font-size:2.3rem; line-height:1.12; color:var(--navy)}
+  .meta{margin:12px 0 22px; color:var(--suave); font-size:.92rem; display:flex; align-items:center; gap:10px}
+  .meta img{width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid var(--rosa)}
+  .hero-img{width:100%; border-radius:16px; margin-bottom:26px}
+  article p{margin-bottom:16px; font-size:1.05rem}
+  article h2{font-family:'Fraunces',serif; color:var(--navy); font-size:1.5rem; margin:28px 0 10px}
+  article ul{margin:0 0 16px 22px}
+  article li{margin-bottom:8px; font-size:1.03rem}
+  .video-box{background:var(--navy); border-radius:16px; padding:18px; margin:24px 0; text-align:center}
+  .video-box p{color:var(--crema); font-family:'Fraunces',serif; font-size:1.1rem; margin-bottom:12px}
+  .video-box video{width:min(340px,100%); border-radius:12px}
+  .cta-box{background:#fff; border:2px solid var(--rosa); border-radius:16px; padding:22px; margin:30px 0; text-align:center}
+  .cta-box h2{margin-top:0}
+  .cta{display:inline-block; background:var(--rosa); color:#fff; font-weight:800; text-decoration:none; padding:13px 22px; border-radius:999px; margin-top:8px}
+  footer{background:var(--navy); color:#CFC8E8; margin-top:44px}
+  .footer-in{max-width:1080px; margin:0 auto; padding:24px 20px; font-size:.92rem}
+  .footer-in a{color:var(--crema)}
+  @media (max-width:620px){ h1{font-size:1.8rem} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-in">
+    <img src="../assets/img/grupo-santa-rosa.jpg" alt="Grupo Santa Rosa">
+    <a href="../index.html">La libreta de Don Rosendo</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="kicker">{{TEMA}}</div>
+  <h1>{{TITULO}}</h1>
+  <div class="meta">
+    <img src="../assets/img/don-rosendo-perfil.png" alt="Don Rosendo">
+    <span>Por <b>Don Rosendo</b>, mascota de Grupo Santa Rosa · {{FECHA_LARGA}} · {{LECTURA}}</span>
+  </div>
+
+  <img class="hero-img" src="{{IMAGEN_HERO}}" alt="{{IMAGEN_HERO_ALT}}">
+
+  <article>
+    {{CUERPO}}
+
+    {{VIDEO_BLOQUE}}
+
+    <div class="cta-box">
+      <h2>¿Ya tienes fecha en mente?</h2>
+      <p>Las fechas buenas vuelan. Escríbenos y ventas de Grupo Santa Rosa te cotiza sin compromiso.</p>
+      <a class="cta" href="https://wa.me/522226168681?text=Hola%2C%20vi%20el%20blog%20de%20Don%20Rosendo%20y%20quiero%20cotizar%20mi%20evento">Cotiza tu fecha: 222 616 8681</a>
+    </div>
+
+    <p><b>— Don Rosendo</b></p>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-in">
+    La libreta de Don Rosendo · Un medio de <a href="https://www.instagram.com/grupo.santarosa">Grupo Santa Rosa</a> · Cholula y Puebla, México · <a href="../index.html">Volver a la portada</a>
+  </div>
+</footer>
+
+</body>
+</html>
