@@ -21,4 +21,6 @@ Blog estático de **Don Rosendo**, la mascota de Grupo Santa Rosa: tips, checkli
 - Voz de Don Rosendo: elegante, pícara y servicial. Español de México.
 - Nada de precios exactos ni promesas de disponibilidad: la cotización la cierra ventas de Grupo Santa Rosa (WhatsApp +52 222 616 8681).
 - Capacidad siempre por espacio; el 1,500 es solo el Complejo Zerezotla completo.
-- Identidad: azul marino #1E1B3A, rosa mexicano #C2185B, crema #F6EFE3, titulares en Fraunces.
+- Identidad digital oficial de GSR (la del cotizador de GSR360): fondo #1F1C3B, paneles #2D2D49, rosa #F8B5CE, verde WhatsApp #247A40, texto blanco. PROHIBIDO vino/burgoña y dorado (eso era de gráficos impresos). Titulares en Fraunces.
+- Contenido: la base son las 10 maneras del cotizador (Ardizana, Arcadia, Zerezotla, Cerezos, Terraza Capulines, Magdalena, Complejo Zerezotla, Terraza Hotel Santa Rosa, Hotel Santa Rosa y eventos a domicilio) y los tipos de evento son amplios: bodas, XV años, graduaciones, bautizos, corporativos y posadas — nada de reducir GSR a «bodas y fiesta».
+- Visuales: solo gráficos planos de fábrica con la mascota oficial; las fotos reales viven solo en las cuentas oficiales de GSR.

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La libreta de Don Rosendo — Tips de eventos y hospedaje en Cholula y Puebla</title>
-<meta name="description" content="Don Rosendo, la mascota de Grupo Santa Rosa, comparte tips, checklists y datos reales para tu boda, XV años, posada o evento en Cholula y Puebla: salones, hotel y los secretos de quien ha visto mil fiestas.">
+<meta name="description" content="Don Rosendo, la mascota de Grupo Santa Rosa, comparte tips, checklists y datos reales para tu boda, XV años, graduación, bautizo, posada o evento de empresa en Cholula y Puebla: salones, jardines, terraza y hotel.">
 <meta property="og:title" content="La libreta de Don Rosendo">
 <meta property="og:description" content="Tips, checklists y datos reales para celebrar en Cholula y Puebla, de la mano de la mascota de Grupo Santa Rosa.">
 <meta property="og:type" content="website">
@@ -14,55 +14,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#1E1B3A; --rosa:#C2185B; --crema:#F6EFE3; --crema2:#EFE6D5;
-    --tinta:#26223F; --suave:#5A5570;
+    --fondo:#1F1C3B; --panel:#2D2D49; --rosa:#F8B5CE; --verde:#247A40;
+    --blanco:#FFFFFF; --suave:#C9C4DE;
   }
   *{box-sizing:border-box; margin:0; padding:0}
-  body{background:var(--crema); color:var(--tinta); font-family:'Archivo',system-ui,sans-serif; line-height:1.55}
+  body{background:var(--fondo); color:var(--blanco); font-family:'Archivo',system-ui,sans-serif; line-height:1.55}
   a{color:var(--rosa)}
   .wrap{max-width:1080px; margin:0 auto; padding:0 20px}
-  header{background:var(--navy); color:var(--crema)}
+  header{background:var(--panel); border-bottom:3px solid var(--rosa)}
   .header-in{display:flex; align-items:center; gap:16px; padding:14px 0}
   .header-in img.logo{height:52px; width:auto; border-radius:8px}
   .header-in .marca{font-family:'Fraunces',serif; font-weight:900; font-size:1.35rem; line-height:1.1}
-  .header-in .marca small{display:block; font-family:'Archivo',sans-serif; font-weight:600; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:#D9CFF0}
+  .header-in .marca small{display:block; font-family:'Archivo',sans-serif; font-weight:600; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--rosa)}
   .header-in nav{margin-left:auto; display:flex; gap:18px; font-weight:600; font-size:.95rem}
-  .header-in nav a{color:var(--crema); text-decoration:none}
-  .header-in nav a:hover{color:#F3A9C6}
+  .header-in nav a{color:var(--blanco); text-decoration:none}
+  .header-in nav a:hover{color:var(--rosa)}
   .hero{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center; padding:44px 0 30px}
-  .hero h1{font-family:'Fraunces',serif; font-weight:900; font-size:2.6rem; line-height:1.08; color:var(--navy)}
+  .hero h1{font-family:'Fraunces',serif; font-weight:900; font-size:2.6rem; line-height:1.08}
   .hero h1 em{color:var(--rosa); font-style:normal}
   .hero p{margin:16px 0 22px; font-size:1.08rem; color:var(--suave); max-width:34rem}
-  .cta{display:inline-block; background:var(--rosa); color:#fff; font-weight:800; text-decoration:none; padding:13px 22px; border-radius:999px}
-  .cta.secundario{background:transparent; color:var(--navy); border:2px solid var(--navy); margin-left:8px}
-  .hero img{width:100%; max-width:380px; justify-self:center}
-  .autor{display:flex; gap:16px; align-items:center; background:#fff; border:1px solid var(--crema2); border-radius:16px; padding:16px 20px; margin:6px 0 34px}
+  .cta{display:inline-block; background:var(--verde); color:#fff; font-weight:800; text-decoration:none; padding:13px 22px; border-radius:999px}
+  .cta.secundario{background:transparent; color:var(--blanco); border:2px solid var(--blanco); margin-left:8px}
+  .hero img{width:100%; max-width:380px; justify-self:center; border-radius:20px}
+  .autor{display:flex; gap:16px; align-items:center; background:var(--panel); border-radius:16px; padding:16px 20px; margin:6px 0 34px}
   .autor img{width:74px; height:74px; border-radius:50%; object-fit:cover; border:3px solid var(--rosa)}
-  .autor b{font-family:'Fraunces',serif; font-size:1.15rem; color:var(--navy)}
+  .autor b{font-family:'Fraunces',serif; font-size:1.15rem}
   .autor p{color:var(--suave); font-size:.95rem}
-  h2.seccion{font-family:'Fraunces',serif; font-weight:900; color:var(--navy); font-size:1.7rem; margin:26px 0 16px}
+  h2.seccion{font-family:'Fraunces',serif; font-weight:900; font-size:1.7rem; margin:26px 0 16px}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px}
-  .card{background:#fff; border:1px solid var(--crema2); border-radius:16px; overflow:hidden; text-decoration:none; color:inherit; display:block}
+  .card{background:var(--panel); border-radius:16px; overflow:hidden; text-decoration:none; color:inherit; display:block}
   .card img{width:100%; height:190px; object-fit:cover; display:block}
   .card .cuerpo{padding:16px 18px 20px}
   .card .tema{font-size:.75rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--rosa)}
-  .card h3{font-family:'Fraunces',serif; font-size:1.25rem; color:var(--navy); margin:6px 0 8px; line-height:1.25}
+  .card h3{font-family:'Fraunces',serif; font-size:1.25rem; margin:6px 0 8px; line-height:1.25}
   .card p{color:var(--suave); font-size:.95rem}
   .card .meta{margin-top:12px; font-size:.82rem; color:var(--suave)}
   .maneras{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; margin-bottom:10px}
-  .manera{background:var(--navy); color:var(--crema); border-radius:14px; padding:16px 18px}
+  .manera{background:var(--panel); border-left:4px solid var(--rosa); border-radius:14px; padding:16px 18px}
   .manera b{font-family:'Fraunces',serif; font-size:1.05rem; display:block}
-  .manera span{font-size:.88rem; color:#CFC8E8}
-  .banda{background:var(--rosa); color:#fff; border-radius:16px; padding:26px; margin:36px 0; text-align:center}
+  .manera span{font-size:.88rem; color:var(--suave)}
+  .banda{background:var(--panel); border:2px solid var(--rosa); border-radius:16px; padding:26px; margin:36px 0; text-align:center}
   .banda h2{font-family:'Fraunces',serif; font-size:1.6rem; margin-bottom:8px}
-  .banda p{opacity:.92; margin-bottom:16px}
-  .banda .cta{background:#fff; color:var(--rosa)}
-  footer{background:var(--navy); color:#CFC8E8; margin-top:44px}
+  .banda p{color:var(--suave); margin-bottom:16px}
+  footer{background:var(--panel); color:var(--suave); margin-top:44px}
   .footer-in{padding:28px 0; display:flex; flex-wrap:wrap; gap:20px; align-items:center}
   .footer-in img{height:44px; border-radius:8px}
   .footer-in .redes{margin-left:auto; display:flex; gap:16px; font-weight:600}
-  .footer-in .redes a{color:var(--crema); text-decoration:none}
-  .footer-in small{width:100%; opacity:.75}
+  .footer-in .redes a{color:var(--blanco); text-decoration:none}
+  .footer-in small{width:100%; opacity:.8}
   @media (max-width:720px){
     .hero{grid-template-columns:1fr; padding-top:30px}
     .hero h1{font-size:2.05rem}
@@ -79,7 +78,7 @@
     <div class="marca">La libreta de Don Rosendo<small>Grupo Santa Rosa · Cholula y Puebla</small></div>
     <nav>
       <a href="#articulos">Artículos</a>
-      <a href="#maneras">Los salones</a>
+      <a href="#maneras">Las 10 maneras</a>
       <a href="#cotizar">Cotiza tu fecha</a>
     </nav>
   </div>
@@ -90,7 +89,7 @@
   <section class="hero">
     <div>
       <h1>Secretos de quien ha visto <em>mil fiestas</em></h1>
-      <p>Soy Don Rosendo, la mascota de Grupo Santa Rosa. En esta libreta comparto tips, checklists y datos reales para que tu boda, tus XV años, tu posada o tu evento salga como lo soñaste — en Cholula y en Puebla.</p>
+      <p>Soy Don Rosendo, la mascota de Grupo Santa Rosa. En esta libreta comparto tips, checklists y datos reales para que tu boda, tus XV años, tu graduación, tu bautizo, tu posada o tu evento de empresa salga como lo soñaste — en Cholula y en Puebla.</p>
       <a class="cta" href="https://wa.me/522226168681?text=Hola%2C%20vi%20el%20blog%20de%20Don%20Rosendo%20y%20quiero%20cotizar%20mi%20evento">Cotiza tu fecha por WhatsApp</a>
       <a class="cta secundario" href="#articulos">Leer la libreta</a>
     </div>
@@ -101,14 +100,14 @@
     <img src="assets/img/don-rosendo-perfil.png" alt="Don Rosendo">
     <div>
       <b>Don Rosendo, tu anfitrión</b>
-      <p>Cabeza de rosa, bigote de gala y décadas de servicio en los salones de Grupo Santa Rosa. Si pasa en una fiesta, yo ya lo vi — y aquí te lo cuento sin rodeos.</p>
+      <p>Cabeza de rosa, bigote de gala y décadas de servicio en los salones y jardines de Grupo Santa Rosa. Si pasa en una fiesta, yo ya lo vi — y aquí te lo cuento sin rodeos.</p>
     </div>
   </section>
 
   <h2 class="seccion" id="articulos">De la libreta</h2>
   <div class="grid" id="lista-posts">
     <a class="card" href="posts/2026-11-20-presentacion-don-rosendo.html">
-      <img src="assets/img/ilustracion-celebraciones.jpg" alt="Ilustración de anillos y confeti con los colores de Grupo Santa Rosa">
+      <img src="assets/img/ilustracion-celebraciones.jpg" alt="Ilustración de anillos y confeti con la identidad de Grupo Santa Rosa">
       <div class="cuerpo">
         <div class="tema">Presentación</div>
         <h3>Soy Don Rosendo: tu anfitrión para celebrar en Cholula y Puebla</h3>
@@ -118,20 +117,20 @@
     </a>
   </div>
 
-  <h2 class="seccion" id="maneras">Mi territorio: las maneras de celebrar con Grupo Santa Rosa</h2>
+  <h2 class="seccion" id="maneras">Mi territorio: las 10 maneras de Grupo Santa Rosa</h2>
   <div class="maneras">
-    <div class="manera"><b>Jardín Ardizana</b><span>Hasta 600 personas</span></div>
-    <div class="manera"><b>Salón Arcadia</b><span>Hasta 600 personas</span></div>
-    <div class="manera"><b>Salón Zerezotla</b><span>Hasta 800 personas</span></div>
-    <div class="manera"><b>Jardín Cerezos</b><span>Hasta 500 personas</span></div>
-    <div class="manera"><b>Jardín Capulines</b><span>Hasta 100 personas</span></div>
-    <div class="manera"><b>Jardín Magdalena</b><span>Hasta 100 personas</span></div>
-    <div class="manera"><b>Complejo Zerezotla completo</b><span>Hasta 1,500 personas</span></div>
-    <div class="manera"><b>Terraza del Hotel en Los Portales</b><span>Hasta 50 personas</span></div>
+    <div class="manera"><b>Ardizana</b><span>Hasta 600 personas</span></div>
+    <div class="manera"><b>Arcadia</b><span>Hasta 600 personas</span></div>
+    <div class="manera"><b>Zerezotla</b><span>Hasta 800 personas</span></div>
+    <div class="manera"><b>Cerezos</b><span>Hasta 500 personas</span></div>
+    <div class="manera"><b>Terraza Capulines</b><span>Hasta 100 personas</span></div>
+    <div class="manera"><b>Magdalena</b><span>Hasta 100 personas</span></div>
+    <div class="manera"><b>Complejo Zerezotla</b><span>Hasta 1,500 personas</span></div>
+    <div class="manera"><b>Terraza Hotel Santa Rosa</b><span>Hasta 50 personas · En Los Portales de San Pedro Cholula</span></div>
     <div class="manera"><b>Hotel Santa Rosa</b><span>31 habitaciones en Los Portales de San Pedro Cholula</span></div>
-    <div class="manera"><b>Servicio a domicilio</b><span>La fiesta de Grupo Santa Rosa, en tu espacio</span></div>
+    <div class="manera"><b>Eventos a domicilio</b><span>La fiesta de Grupo Santa Rosa, en tu espacio</span></div>
   </div>
-  <p style="color:var(--suave); font-size:.92rem">Las fotos y los eventos reales de cada salón viven en la cuenta oficial <a href="https://www.instagram.com/grupo.santarosa">@grupo.santarosa</a>. Aquí, en la libreta, va la letra chica que sí te conviene leer.</p>
+  <p style="color:var(--suave); font-size:.92rem">Las fotos y los eventos reales de cada espacio viven en la cuenta oficial <a href="https://www.instagram.com/grupo.santarosa">@grupo.santarosa</a>. Aquí, en la libreta, va la letra chica que sí te conviene leer.</p>
 
   <section class="banda" id="cotizar">
     <h2>¿Ya tienes fecha en mente?</h2>
@@ -144,7 +143,7 @@
 <footer>
   <div class="wrap footer-in">
     <img src="assets/img/grupo-santa-rosa.jpg" alt="Grupo Santa Rosa">
-    <div><b style="color:var(--crema)">La libreta de Don Rosendo</b><br>Un medio de Grupo Santa Rosa · Cholula y Puebla, México</div>
+    <div><b style="color:var(--blanco)">La libreta de Don Rosendo</b><br>Un medio de Grupo Santa Rosa · Cholula y Puebla, México</div>
     <div class="redes">
       <a href="https://www.instagram.com/donrosendo.gsr">Instagram</a>
       <a href="https://www.tiktok.com/@donrosendo.gsr">TikTok</a>
