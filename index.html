@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 <style>
   :root{
     --fondo:#1F1C3B; --panel:#2D2D49; --rosa:#F8B5CE; --verde:#247A40;
@@ -56,6 +57,18 @@
   .banda{background:var(--panel); border:2px solid var(--rosa); border-radius:16px; padding:26px; margin:36px 0; text-align:center}
   .banda h2{font-family:'Fraunces',serif; font-size:1.6rem; margin-bottom:8px}
   .banda p{color:var(--suave); margin-bottom:16px}
+  .suscripcion{background:var(--panel); border:2px solid var(--rosa); border-radius:16px; padding:26px; margin:36px 0}
+  .suscripcion h2{font-family:'Fraunces',serif; font-size:1.6rem; margin-bottom:8px}
+  .suscripcion p{color:var(--suave); margin-bottom:16px}
+  .suscripcion .sib-form{background:transparent; padding:0}
+  .suscripcion .sib-container--large{background:transparent; border:none; padding:0}
+  .suscripcion .entry__label{color:var(--blanco); font-family:'Archivo',sans-serif}
+  .suscripcion .entry__field{background:var(--fondo); border:1px solid var(--suave); border-radius:10px}
+  .suscripcion .input{background:transparent; color:var(--blanco); width:100%; padding:10px 12px; border:none}
+  .suscripcion .entry__specification{color:var(--suave); font-size:.85rem}
+  .suscripcion .sib-form-block__button{background:var(--verde); color:#fff; font-weight:800; border:none; border-radius:999px; padding:13px 22px; cursor:pointer; font-family:'Archivo',sans-serif}
+  .suscripcion .sib-form-message-panel{border-radius:10px; margin-bottom:14px}
+  .suscripcion .form-nota{font-size:.85rem; color:var(--suave)}
   footer{background:var(--panel); color:var(--suave); margin-top:44px}
   .footer-in{padding:28px 0; display:flex; flex-wrap:wrap; gap:20px; align-items:center}
   .footer-in img{height:44px; border-radius:8px}
@@ -79,6 +92,7 @@
     <nav>
       <a href="#articulos">Artículos</a>
       <a href="#maneras">Las 10 maneras</a>
+      <a href="#suscripcion">Newsletter</a>
       <a href="#cotizar">Cotiza tu fecha</a>
     </nav>
   </div>
@@ -138,6 +152,54 @@
     <a class="cta" href="https://wa.me/522226168681?text=Hola%2C%20vi%20el%20blog%20de%20Don%20Rosendo%20y%20quiero%20cotizar%20mi%20evento">WhatsApp de ventas: 222 616 8681</a>
   </section>
 
+  <!-- Suscripción por correo (Brevo, lista 10 «Don Rosendo — Semanal»).
+       PENDIENTE (paso de navegador en la web de Brevo): crear el formulario de
+       suscripción apuntando a la lista 10 y pegar su URL de serve en el
+       action del formulario de abajo; la estructura ya es la de Brevo. -->
+  <section class="suscripcion" id="suscripcion">
+    <h2>La libreta, en tu correo</h2>
+    <p>Cada martes te mando el artículo de la semana: un tip, una checklist o un dato real para que tu evento salga como lo soñaste. Sin spam y sin vender tu correo; date de baja cuando quieras, desde el mismo correo.</p>
+    <div class="sib-form">
+      <div id="sib-form-container" class="sib-form-container">
+        <div id="error-message" class="sib-form-message-panel">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Algo salió mal con tu suscripción. Revisa tu correo e inténtalo de nuevo.</span>
+          </div>
+        </div>
+        <div></div>
+        <div id="success-message" class="sib-form-message-panel">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">¡Ya estás en la lista! Cada martes te llega la libreta a tu correo. — Don Rosendo</span>
+          </div>
+        </div>
+        <div></div>
+        <div id="sib-container" class="sib-container--large sib-container--vertical">
+          <form id="sib-form" method="POST" action="https://sibforms.com/serve/PENDIENTE-FORMULARIO-DON-ROSENDO" data-type="subscription">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <label class="entry__label" for="EMAIL" data-required="*">Tu correo</label>
+                  <div class="entry__field">
+                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" value="" placeholder="tunombre@correo.com" data-required="true" required>
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary"></label>
+                <label class="entry__specification">Un correo a la semana, los martes. Nada más.</label>
+              </div>
+            </div>
+            <div class="sib-form-block">
+              <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                Quiero la libreta en mi correo
+              </button>
+            </div>
+            <input type="text" name="email_address_check" value="" class="input--hidden">
+            <input type="hidden" name="locale" value="es">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -153,6 +215,24 @@
     <small>Don Rosendo comparte tips y datos de planeación; la disponibilidad de fechas y las cotizaciones las confirma siempre el equipo de ventas de Grupo Santa Rosa.</small>
   </div>
 </footer>
+
+<!-- Brevo: textos de validación y envío del formulario de suscripción -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Elige un código de país';
+  window.LOCALE = 'es';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "La información que has proporcionado no es válida. Comprueba el formato del campo e inténtalo de nuevo.";
+  window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío. ";
+  window.GENERIC_INVALID_MESSAGE = "La información que has proporcionado no es válida. Comprueba el formato del campo e inténtalo de nuevo.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} lista seleccionada',
+      selectedLists: '{quantity} listas seleccionadas',
+      selectedOption: '{quantity} seleccionado',
+      selectedOptions: '{quantity} seleccionados'
+    }
+  };
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 </body>
 </html>
