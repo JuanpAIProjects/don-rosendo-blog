@@ -8,10 +8,11 @@
 <meta property="og:title" content="La libreta de Don Rosendo">
 <meta property="og:description" content="Tips, checklists y datos reales para celebrar en Cholula y Puebla, de la mano de la mascota de Grupo Santa Rosa.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/don-rosendo-oficial.png">
+<meta property="og:image" content="https://don-rosendo.netlify.app/assets/img/don-rosendo-oficial.png">
+<link rel="icon" type="image/png" href="assets/img/don-rosendo-perfil.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 <style>
   :root{
@@ -25,40 +26,50 @@
   header{background:var(--panel); border-bottom:3px solid var(--rosa)}
   .header-in{display:flex; align-items:center; gap:16px; padding:14px 0}
   .header-in img.logo{height:52px; width:auto; border-radius:8px}
-  .header-in .marca{font-family:'Fraunces',serif; font-weight:900; font-size:1.35rem; line-height:1.1}
+  .header-in .marca{font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.01em; font-size:1.35rem; line-height:1.1}
   .header-in .marca small{display:block; font-family:'Archivo',sans-serif; font-weight:600; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--rosa)}
   .header-in nav{margin-left:auto; display:flex; gap:18px; font-weight:600; font-size:.95rem}
   .header-in nav a{color:var(--blanco); text-decoration:none}
   .header-in nav a:hover{color:var(--rosa)}
   .hero{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center; padding:44px 0 30px}
-  .hero h1{font-family:'Fraunces',serif; font-weight:900; font-size:2.6rem; line-height:1.08}
+  .hero h1{font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.015em; font-size:2.6rem; line-height:1.08}
   .hero h1 em{color:var(--rosa); font-style:normal}
   .hero p{margin:16px 0 22px; font-size:1.08rem; color:var(--suave); max-width:34rem}
   .cta{display:inline-block; background:var(--verde); color:#fff; font-weight:800; text-decoration:none; padding:13px 22px; border-radius:999px}
   .cta.secundario{background:transparent; color:var(--blanco); border:2px solid var(--blanco); margin-left:8px}
   .hero img{width:100%; max-width:380px; justify-self:center; border-radius:20px}
+  @keyframes drSaludo{from{transform:rotate(-1.6deg) translateY(0)}to{transform:rotate(1.6deg) translateY(-7px)}}
+  .dr-saludo{animation:drSaludo 3.6s ease-in-out infinite alternate; transform-origin:50% 92%; box-shadow:0 18px 42px rgba(0,0,0,.35)}
+  @media (prefers-reduced-motion:reduce){.dr-saludo{animation:none}}
   .autor{display:flex; gap:16px; align-items:center; background:var(--panel); border-radius:16px; padding:16px 20px; margin:6px 0 34px}
   .autor img{width:74px; height:74px; border-radius:50%; object-fit:cover; border:3px solid var(--rosa)}
-  .autor b{font-family:'Fraunces',serif; font-size:1.15rem}
+  .autor b{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.15rem}
   .autor p{color:var(--suave); font-size:.95rem}
-  h2.seccion{font-family:'Fraunces',serif; font-weight:900; font-size:1.7rem; margin:26px 0 16px}
+  h2.seccion{font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.01em; font-size:1.7rem; margin:26px 0 16px}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px}
   .card{background:var(--panel); border-radius:16px; overflow:hidden; text-decoration:none; color:inherit; display:block}
   .card img{width:100%; height:190px; object-fit:cover; display:block}
   .card .cuerpo{padding:16px 18px 20px}
   .card .tema{font-size:.75rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--rosa)}
-  .card h3{font-family:'Fraunces',serif; font-size:1.25rem; margin:6px 0 8px; line-height:1.25}
+  .card h3{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.25rem; margin:6px 0 8px; line-height:1.25}
   .card p{color:var(--suave); font-size:.95rem}
   .card .meta{margin-top:12px; font-size:.82rem; color:var(--suave)}
   .maneras{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; margin-bottom:10px}
-  .manera{background:var(--panel); border-left:4px solid var(--rosa); border-radius:14px; padding:16px 18px}
-  .manera b{font-family:'Fraunces',serif; font-size:1.05rem; display:block}
-  .manera span{font-size:.88rem; color:var(--suave)}
+  .manera{background:var(--panel); border:1px solid rgba(255,255,255,.14); border-radius:14px; padding:16px 18px; display:flex; flex-direction:column; gap:5px; text-decoration:none; color:inherit; transition:transform .15s ease,border-color .15s ease,background .15s ease}
+  .manera:hover,.manera:focus-visible{transform:translateY(-2px); border-color:var(--rosa); background:#34345A}
+  .manera:active{transform:translateY(0)}
+  .manera .m-top{display:flex; align-items:center; gap:10px}
+  .manera .m-num{flex:none; width:30px; height:30px; border-radius:50%; background:rgba(248,181,206,.16); color:var(--rosa); font-weight:800; font-size:.95rem; display:flex; align-items:center; justify-content:center}
+  .manera b{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.08rem}
+  .manera .m-desc{font-size:.9rem; color:var(--suave)}
+  .manera .m-btn{margin-top:9px; align-self:flex-start; background:var(--verde); color:#fff; font-size:.82rem; font-weight:800; border-radius:999px; padding:7px 14px}
+  .maneras-nota{color:var(--suave); font-size:.95rem; margin:-6px 0 14px}
+  h2.seccion-larga{font-size:1.45rem; line-height:1.28}
   .banda{background:var(--panel); border:2px solid var(--rosa); border-radius:16px; padding:26px; margin:36px 0; text-align:center}
-  .banda h2{font-family:'Fraunces',serif; font-size:1.6rem; margin-bottom:8px}
+  .banda h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.6rem; margin-bottom:8px}
   .banda p{color:var(--suave); margin-bottom:16px}
   .suscripcion{background:var(--panel); border:2px solid var(--rosa); border-radius:16px; padding:26px; margin:36px 0}
-  .suscripcion h2{font-family:'Fraunces',serif; font-size:1.6rem; margin-bottom:8px}
+  .suscripcion h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.6rem; margin-bottom:8px}
   .suscripcion p{color:var(--suave); margin-bottom:16px}
   .suscripcion .sib-form{background:transparent; padding:0}
   .suscripcion .sib-container--large{background:transparent; border:none; padding:0}
@@ -78,7 +89,9 @@
   @media (max-width:720px){
     .hero{grid-template-columns:1fr; padding-top:30px}
     .hero h1{font-size:2.05rem}
-    .header-in nav{display:none}
+    .header-in{flex-wrap:wrap; row-gap:8px}
+    .header-in nav{margin-left:0; width:100%; overflow-x:auto; gap:16px; padding-bottom:2px}
+    .header-in nav a{white-space:nowrap}
     .cta.secundario{margin-left:0; margin-top:10px}
   }
 </style>
@@ -107,7 +120,7 @@
       <a class="cta" href="https://wa.me/522226168681?text=Hola%2C%20vi%20el%20blog%20de%20Don%20Rosendo%20y%20quiero%20cotizar%20mi%20evento">Cotiza tu fecha por WhatsApp</a>
       <a class="cta secundario" href="#articulos">Leer la libreta</a>
     </div>
-    <img src="assets/img/don-rosendo-oficial.png" alt="Don Rosendo, la mascota de Grupo Santa Rosa">
+    <img class="dr-saludo" src="assets/img/don-rosendo-oficial.png" alt="Don Rosendo, la mascota de Grupo Santa Rosa">
   </section>
 
   <section class="autor">
@@ -131,18 +144,59 @@
     </a>
   </div>
 
-  <h2 class="seccion" id="maneras">Mi territorio: las 10 maneras de Grupo Santa Rosa</h2>
+  <h2 class="seccion seccion-larga" id="maneras">¿Sabías que en Grupo Santa Rosa tenemos 10 maneras de demostrarte que el buen servicio es nuestra especialidad?</h2>
+  <p class="maneras-nota">Toca cualquier espacio y te abrimos el WhatsApp de ventas con tu mensaje ya escrito: te lleva directo, como en nuestras cotizaciones.</p>
   <div class="maneras">
-    <div class="manera"><b>Ardizana</b><span>Hasta 600 personas</span></div>
-    <div class="manera"><b>Arcadia</b><span>Hasta 600 personas</span></div>
-    <div class="manera"><b>Zerezotla</b><span>Hasta 800 personas</span></div>
-    <div class="manera"><b>Cerezos</b><span>Hasta 500 personas</span></div>
-    <div class="manera"><b>Terraza Capulines</b><span>Hasta 100 personas</span></div>
-    <div class="manera"><b>Magdalena</b><span>Hasta 100 personas</span></div>
-    <div class="manera"><b>Complejo Zerezotla</b><span>Hasta 1,500 personas</span></div>
-    <div class="manera"><b>Terraza Hotel Santa Rosa</b><span>Hasta 50 personas · En Los Portales de San Pedro Cholula</span></div>
-    <div class="manera"><b>Hotel Santa Rosa</b><span>31 habitaciones en Los Portales de San Pedro Cholula</span></div>
-    <div class="manera"><b>Eventos a domicilio</b><span>La fiesta de Grupo Santa Rosa, en tu espacio</span></div>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20el%20sal%C3%B3n%20Ardizana%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar Ardizana por WhatsApp">
+      <span class="m-top"><span class="m-num">1</span><b>Ardizana</b></span>
+      <span class="m-desc">Hasta 600 personas</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20el%20sal%C3%B3n%20Arcadia%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar Arcadia por WhatsApp">
+      <span class="m-top"><span class="m-num">2</span><b>Arcadia</b></span>
+      <span class="m-desc">Hasta 600 personas</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20el%20sal%C3%B3n%20Zerezotla%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar Zerezotla por WhatsApp">
+      <span class="m-top"><span class="m-num">3</span><b>Zerezotla</b></span>
+      <span class="m-desc">Hasta 800 personas</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20el%20sal%C3%B3n%20Cerezos%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar Cerezos por WhatsApp">
+      <span class="m-top"><span class="m-num">4</span><b>Cerezos</b></span>
+      <span class="m-desc">Hasta 500 personas</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20la%20Terraza%20Capulines%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar la Terraza Capulines por WhatsApp">
+      <span class="m-top"><span class="m-num">5</span><b>Terraza Capulines</b></span>
+      <span class="m-desc">Hasta 100 personas</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20el%20sal%C3%B3n%20Magdalena%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar Magdalena por WhatsApp">
+      <span class="m-top"><span class="m-num">6</span><b>Magdalena</b></span>
+      <span class="m-desc">Hasta 100 personas</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20el%20Complejo%20Zerezotla%20completo%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar el Complejo Zerezotla por WhatsApp">
+      <span class="m-top"><span class="m-num">7</span><b>Complejo Zerezotla</b></span>
+      <span class="m-desc">Hasta 1,500 personas</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20la%20Terraza%20Hotel%20Santa%20Rosa%20para%20un%20evento.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar la Terraza Hotel Santa Rosa por WhatsApp">
+      <span class="m-top"><span class="m-num">8</span><b>Terraza Hotel Santa Rosa</b></span>
+      <span class="m-desc">Hasta 50 personas · En Los Portales de San Pedro Cholula</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20hospedar%20a%20mis%20invitados%20en%20el%20Hotel%20Santa%20Rosa.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Preguntar por el Hotel Santa Rosa en WhatsApp">
+      <span class="m-top"><span class="m-num">9</span><b>Hotel Santa Rosa</b></span>
+      <span class="m-desc">31 habitaciones en Los Portales de San Pedro Cholula</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
+    <a class="manera" href="https://wa.me/522226168681?text=Hola%2C%20quiero%20cotizar%20un%20evento%20a%20domicilio.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="Cotizar un evento a domicilio por WhatsApp">
+      <span class="m-top"><span class="m-num">10</span><b>Eventos a domicilio</b></span>
+      <span class="m-desc">La fiesta de Grupo Santa Rosa, en tu espacio</span>
+      <span class="m-btn">Cotizar por WhatsApp</span>
+    </a>
   </div>
   <p style="color:var(--suave); font-size:.92rem">Las fotos y los eventos reales de cada espacio viven en la cuenta oficial <a href="https://www.instagram.com/grupo.santarosa">@grupo.santarosa</a>. Aquí, en la libreta, va la letra chica que sí te conviene leer.</p>
 
@@ -152,10 +206,8 @@
     <a class="cta" href="https://wa.me/522226168681?text=Hola%2C%20vi%20el%20blog%20de%20Don%20Rosendo%20y%20quiero%20cotizar%20mi%20evento">WhatsApp de ventas: 222 616 8681</a>
   </section>
 
-  <!-- Suscripción por correo (Brevo, lista 10 «Don Rosendo — Semanal»).
-       PENDIENTE (paso de navegador en la web de Brevo): crear el formulario de
-       suscripción apuntando a la lista 10 y pegar su URL de serve en el
-       action del formulario de abajo; la estructura ya es la de Brevo. -->
+  <!-- Suscripción por correo (Brevo, lista 10 «Don Rosendo — Semanal»):
+       formulario en vivo; el action apunta al serve de Brevo de esa lista. -->
   <section class="suscripcion" id="suscripcion">
     <h2>La libreta, en tu correo</h2>
     <p>Cada martes te mando el artículo de la semana: un tip, una checklist o un dato real para que tu evento salga como lo soñaste. Sin spam y sin vender tu correo; date de baja cuando quieras, desde el mismo correo.</p>
