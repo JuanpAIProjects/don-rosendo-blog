@@ -48,6 +48,11 @@
   .autor img{width:74px; height:74px; border-radius:50%; object-fit:cover; border:3px solid var(--rosa)}
   .autor b{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.15rem}
   .autor p{color:var(--suave); font-size:.95rem}
+  .banda-hotel{display:flex; gap:18px; align-items:center; background:linear-gradient(135deg,#34345A 0%,var(--panel) 60%,#26224A 100%); border:1px solid rgba(255,255,255,.1); box-shadow:0 10px 24px rgba(0,0,0,.2); border-radius:16px; padding:22px 26px; margin:0 0 6px}
+  .banda-hotel .bh-ico{flex:none; width:52px; height:52px; border-radius:50%; background:rgba(248,181,206,.16); color:var(--rosa); display:flex; align-items:center; justify-content:center}
+  .banda-hotel h2{font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.01em; font-size:1.3rem; line-height:1.2; margin-bottom:4px}
+  .banda-hotel p{color:var(--suave); font-size:.98rem; max-width:36rem}
+  .banda-hotel .cta{margin-left:auto; flex:none}
   h2.seccion{font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.01em; font-size:1.7rem; margin:26px 0 16px; display:flex; align-items:center; gap:12px}
   h2.seccion::before{content:""; width:26px; height:4px; border-radius:99px; background:var(--rosa); flex:none}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px}
@@ -98,6 +103,15 @@
   .alianzas{background:linear-gradient(135deg,#34345A 0%,var(--panel) 60%,#26224A 100%); border:1px solid rgba(255,255,255,.1); box-shadow:0 10px 24px rgba(0,0,0,.2); border-radius:16px; padding:26px; margin:0 0 6px}
   .alianzas p{color:var(--suave); max-width:47rem; margin-bottom:18px}
   .alianzas p b{color:var(--blanco)}
+  .sigue{background:linear-gradient(135deg,#34345A 0%,var(--panel) 60%,#26224A 100%); border:1px solid rgba(255,255,255,.1); box-shadow:0 10px 24px rgba(0,0,0,.2); border-radius:16px; padding:26px; margin:36px 0}
+  .sigue h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.6rem; margin-bottom:8px}
+  .sigue .sigue-nota{color:var(--suave); margin-bottom:20px; max-width:47rem}
+  .sigue-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+  .sigue h3{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.02rem; color:var(--rosa); margin-bottom:10px}
+  .sigue .pills{display:flex; flex-wrap:wrap; gap:7px}
+  .sigue .pill{display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.12); color:#fff; border-radius:999px; padding:7px 14px; font-size:.84rem; font-weight:700; text-decoration:none; transition:background .15s ease}
+  .sigue .pill:hover{background:rgba(255,255,255,.2)}
+  .sigue .pill svg{color:var(--rosa); flex:none}
   .banda{background:linear-gradient(135deg,#34345A 0%,var(--panel) 60%,#26224A 100%); border:2px solid var(--rosa); border-radius:16px; padding:26px; margin:36px 0; text-align:center}
   .banda h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.6rem; margin-bottom:8px}
   .banda p{color:var(--suave); margin-bottom:16px}
@@ -122,16 +136,21 @@
   .footer-in .redes a svg{color:var(--rosa); flex:none}
   .footer-in small{width:100%; opacity:.8}
   @media (max-width:720px){
+    .wrap{padding:0 24px}
+    .banda-hotel{flex-direction:column; align-items:flex-start; padding:20px}
+    .banda-hotel .cta{margin-left:0}
     .hero{grid-template-columns:1fr; padding-top:30px}
     .hero h1{font-size:2.05rem}
     .header-in{flex-wrap:wrap; row-gap:8px}
     .header-in nav{margin-left:0; width:100%; flex-wrap:wrap; overflow:visible; gap:8px; padding-bottom:2px}
     .header-in nav a{white-space:nowrap; padding:6px 11px; font-size:.9rem}
     .cta.secundario{margin-left:0; margin-top:10px}
-    .panel10{padding:20px 16px 14px; border-radius:16px}
+    .panel10{padding:20px 20px 14px; border-radius:16px}
+    .p10-card{padding:15px 18px}
     .p10-titulo{font-size:1.32rem}
     .p10-grid{grid-template-columns:1fr}
     .p10-atencion{flex-direction:column; align-items:flex-start}
+    .sigue-grid{grid-template-columns:1fr}
     .footer-in .redes{margin-left:0}
   }
 </style>
@@ -170,6 +189,15 @@
       <b>Don Rosendo, tu anfitrión</b>
       <p>Cabeza de rosa, bigote de gala y décadas de servicio en los salones, los jardines y el hotel de Grupo Santa Rosa. Si pasa en una fiesta — o en una estancia — yo ya lo vi, y aquí te lo cuento sin rodeos.</p>
     </div>
+  </section>
+
+  <section class="banda-hotel">
+    <span class="bh-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18.5V8M3 14h18v4.5M21 18.5V14a3 3 0 0 0-3-3h-7v3M5 11V9.5A1.5 1.5 0 0 1 6.5 8h2A1.5 1.5 0 0 1 10 9.5V11"/></svg></span>
+    <div>
+      <h2>¿Y si tus invitados vienen de fuera?</h2>
+      <p>El Hotel Santa Rosa está dentro de Los Portales de San Pedro Cholula, a minutos de los salones de Zerezotla: termina la fiesta y nadie tiene que manejar de regreso.</p>
+    </div>
+    <a class="cta" href="https://wa.me/522224300713?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20Hotel%20Santa%20Rosa%20para%20hospedar%20a%20mis%20invitados.%20%C2%BFMe%20ayudas%3F"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4zM9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.8-2-1-1 1a5 5 0 0 1-2.7-2.7l1-1-1-2z"/></svg>Hospedaje por WhatsApp</a>
   </section>
 
   <h2 class="seccion" id="articulos">De la libreta</h2>
@@ -217,6 +245,30 @@
     <h2>¿Ya tienes fecha en mente?</h2>
     <p>Las fechas buenas vuelan. Escríbenos por WhatsApp y ventas de Grupo Santa Rosa te cotiza sin compromiso.</p>
     <a class="cta" href="https://wa.me/522226168681?text=Hola%2C%20vi%20el%20blog%20de%20Don%20Rosendo%20y%20quiero%20cotizar%20mi%20evento"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4zM9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.8-2-1-1 1a5 5 0 0 1-2.7-2.7l1-1-1-2z"/></svg>WhatsApp de ventas: 222 616 8681</a>
+  </section>
+
+  <section class="sigue">
+    <h2>Sigue la fiesta</h2>
+    <p class="sigue-nota">Aquí Don Rosendo cuenta los tips y la letra chica de tu evento; en la cuenta oficial de Grupo Santa Rosa viven las fotos y los eventos reales.</p>
+    <div class="sigue-grid">
+      <div>
+        <h3>Sigue a Don Rosendo</h3>
+        <div class="pills">
+          <a class="pill" href="https://www.instagram.com/donrosendo.gsr" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM16.8 7.2h.01"/></svg>@donrosendo.gsr</a>
+          <a class="pill" href="https://www.tiktok.com/@donrosendo.gsr" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3.5v11.5a3.5 3.5 0 1 1-3.5-3.5M13 3.5c.3 2.5 2.2 4.4 4.7 4.6"/></svg>@donrosendo.gsr</a>
+          <a class="pill" href="https://www.youtube.com/@donrosendogsr" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 5.5h15v13h-15zM10.5 9.3v5.4l4.8-2.7z"/></svg>@donrosendogsr</a>
+        </div>
+      </div>
+      <div>
+        <h3>Y a la casa: Grupo Santa Rosa</h3>
+        <div class="pills">
+          <a class="pill" href="https://www.instagram.com/grupo.santarosa" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM16.8 7.2h.01"/></svg>@grupo.santarosa</a>
+          <a class="pill" href="https://www.facebook.com/share/1BmBEYtUk8/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-7.5h2.5l.5-3h-3V8.8c0-.9.3-1.5 1.6-1.5H17V4.6a20 20 0 0 0-2.4-.1C12.4 4.5 11 5.9 11 8.3v2.2H8.5v3H11V21"/></svg>Facebook</a>
+          <a class="pill" href="https://www.tiktok.com/@grupo.santa.rosa?_r=1&_t=ZS-9AMvUi3EiwO" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3.5v11.5a3.5 3.5 0 1 1-3.5-3.5M13 3.5c.3 2.5 2.2 4.4 4.7 4.6"/></svg>@grupo.santa.rosa</a>
+          <a class="pill" href="https://gruposantarosa.mx/" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>gruposantarosa.mx</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Suscripción por correo (Brevo, lista 10 «Don Rosendo — Semanal»):
