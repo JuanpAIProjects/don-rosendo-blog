@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  // Reveal al scroll: la clase en <html> solo se pone si hay IntersectionObserver
+  // y el visitante NO pidio reducir movimiento. Sin JS, todo se ve completo.
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('reveal-on');
+  }
+</script>
+<title>Dónde hospedarte en Cholula: zonas, distancias a la Pirámide y el plan para tus invitados — La libreta de Don Rosendo</title>
+<meta name="description" content="Guía honesta para dormir en Cholula: qué zona te conviene según tu plan, distancias reales a la Gran Pirámide y cómo resolver el hospedaje de los invitados de tu evento.">
+<meta property="og:title" content="Dónde hospedarte en Cholula: zonas, distancias a la Pirámide y el plan para tus invitados">
+<meta property="og:description" content="Guía honesta para dormir en Cholula: qué zona te conviene según tu plan, distancias reales a la Gran Pirámide y cómo resolver el hospedaje de los invitados de tu evento.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="../assets/img/don-rosendo-oficial.png">
+<meta name="theme-color" content="#1F1C3B">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/img/icono-don-rosendo-512.png">
+<link rel="apple-touch-icon" href="../assets/img/icono-don-rosendo-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{ --fondo:#1F1C3B; --panel:#2D2D49; --rosa:#F8B5CE; --verde:#247A40; --blanco:#FFFFFF; --suave:#C9C4DE }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--fondo); color:var(--blanco); font-family:'Archivo',system-ui,sans-serif; line-height:1.65}
+  a{color:var(--rosa)}
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px}
+  header{position:sticky; top:0; z-index:60; background:rgba(31,28,59,.96); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); border-bottom:3px solid var(--rosa); box-shadow:0 10px 24px rgba(0,0,0,.30)}
+  .header-in{max-width:1080px; margin:0 auto; padding:18px 20px 14px; display:flex; align-items:center; gap:16px; transition:padding .22s ease}
+  .header-in img{height:46px; border-radius:8px; transition:height .22s ease}
+  .header-in a{color:var(--blanco); text-decoration:none; font-family:'Archivo',sans-serif; font-weight:800; font-size:1.15rem}
+  .header-in .brand-link{display:flex; align-items:center; gap:16px}
+  header.compacto .header-in{padding-top:8px; padding-bottom:7px}
+  header.compacto .header-in img{height:32px}
+  header.compacto .header-in .brand-link{font-size:1rem}
+  .kicker{display:inline-block; margin:34px 0 10px; background:rgba(248,181,206,.14); padding:5px 13px; border-radius:999px; font-size:.74rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--rosa)}
+  h1{font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.015em; font-size:2.3rem; line-height:1.12}
+  .meta{margin:12px 0 22px; color:var(--suave); font-size:.92rem; display:flex; align-items:center; gap:10px}
+  .meta img{width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid var(--rosa)}
+  .hero-img{width:100%; border-radius:16px; margin-bottom:26px; border:1px solid rgba(255,255,255,.12); box-shadow:0 14px 30px rgba(0,0,0,.25)}
+  article p{margin-bottom:16px; font-size:1.05rem}
+  article h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.5rem; margin:28px 0 10px; display:flex; align-items:center; gap:11px}
+  article h2::before{content:""; width:22px; height:4px; border-radius:99px; background:var(--rosa); flex:none}
+  article ul{margin:0 0 16px 22px}
+  article li{margin-bottom:8px; font-size:1.03rem}
+  .video-box{background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:16px; padding:18px; margin:24px 0; text-align:center}
+  .video-box p{font-family:'Archivo',sans-serif; font-weight:800; font-size:1.1rem; margin-bottom:12px}
+  .video-box video{width:min(340px,100%); border-radius:12px}
+  .cta-box{background:linear-gradient(135deg,#34345A 0%,var(--panel) 60%,#26224A 100%); border:2px solid var(--rosa); border-radius:16px; padding:22px; margin:30px 0; text-align:center}
+  .cta-box h2{margin-top:0}
+  .cta-box p{color:var(--suave)}
+  .cta{display:inline-flex; align-items:center; gap:9px; background:var(--verde); color:#fff; font-weight:800; text-decoration:none; padding:13px 22px; border-radius:999px; margin-top:8px; box-shadow:0 10px 24px rgba(0,0,0,.28); transition:transform .15s ease,filter .15s ease}
+  .cta:hover{transform:translateY(-1px); filter:brightness(1.06)}
+  .cta svg{flex:none}
+  .volver{display:inline-flex; align-items:center; gap:7px; padding:8px 15px; border:1.5px solid rgba(255,255,255,.4); border-radius:999px; color:var(--blanco); text-decoration:none; font-weight:700; font-size:.92rem}
+  .volver:hover{border-color:var(--rosa); color:var(--rosa)}
+  .volver-top{margin:20px 0 2px}
+  .volver-bottom{margin:10px 0 4px}
+  footer{background:var(--panel); color:var(--suave); margin-top:44px; border-top:1px solid rgba(255,255,255,.08)}
+  .footer-in{max-width:1080px; margin:0 auto; padding:24px 20px 92px; font-size:.92rem}
+  .footer-in a{color:var(--blanco)}
+  /* -- Reveal al scroll: el estado oculto solo existe con la clase del script en <html> -- */
+  html.reveal-on .reveal{opacity:0; transform:translateY(12px); transition:opacity .5s ease,transform .5s ease}
+  html.reveal-on .reveal.visible{opacity:1; transform:none}
+  @media (prefers-reduced-motion:reduce){html.reveal-on .reveal{opacity:1; transform:none; transition:none}}
+  /* -- Botón flotante «volver arriba»: aparece solo tras bajar ~600px (JS); sin JS no aparece ni estorba -- */
+  .to-top{position:fixed; right:18px; bottom:94px; z-index:70; width:48px; height:48px; border-radius:50%; background:var(--fondo); color:var(--rosa); border:2px solid var(--rosa); display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 10px 24px rgba(0,0,0,.35); opacity:0; visibility:hidden; transform:translateY(10px); transition:opacity .25s ease,transform .25s ease,visibility .25s ease,background .15s ease,color .15s ease}
+  .to-top.visible{opacity:1; visibility:visible; transform:none}
+  .to-top:hover{background:var(--rosa); color:var(--fondo)}
+  @media (prefers-reduced-motion:reduce){.header-in,.header-in img,.to-top{transition:none}}
+  @media (max-width:620px){ h1{font-size:1.8rem} .header-in{padding-top:12px; padding-bottom:10px} .header-in img{height:38px} header.compacto .header-in{padding-top:7px; padding-bottom:6px} header.compacto .header-in img{height:30px} .to-top{right:14px; bottom:96px; width:44px; height:44px} }
+</style>
+</head>
+<body id="top">
+
+<header>
+  <div class="header-in">
+    <a class="brand-link" href="../index.html"><img src="../assets/img/grupo-santa-rosa.jpg" alt="Grupo Santa Rosa"><span>La libreta de Don Rosendo</span></a>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="volver volver-top" href="../index.html">← Volver al inicio</a>
+  <div class="kicker">Hotel</div>
+  <h1>Dónde hospedarte en Cholula: zonas, distancias a la Pirámide y el plan para tus invitados</h1>
+  <div class="meta">
+    <img src="../assets/img/don-rosendo-perfil.png" alt="Don Rosendo">
+    <span>Por <b>Don Rosendo</b>, mascota de Grupo Santa Rosa · 22 de noviembre de 2026 · 5 min de lectura</span>
+  </div>
+
+  <img class="hero-img reveal" src="../assets/img/ilustracion-portales.jpg" alt="Ilustración de Los Portales de San Pedro Cholula con la identidad de Grupo Santa Rosa">
+
+  <article>
+    
+<p>Cholula se visita por la Pirámide, pero se duerme según el plan. No es lo mismo venir de escapada en pareja, traer a la familia completa o resolver dónde van a dormir los cien invitados de tu boda. Llevo años viendo llegar gente a este pueblo mágico y te lo ordeno como lo haría para mi propia familia: por zonas, con distancias reales y sin humo.</p>
+
+<h2>Las zonas, sin vueltas</h2>
+<p><b>Los Portales y el centro de San Pedro.</b> La zona para hacerlo todo caminando: el zócalo, la Capilla Real y el convento de San Gabriel cruzando la plaza, restaurantes en los arcos y la Gran Pirámide a unos 800 metros, unos 12 minutos a pie. Si tu plan es turistear y cenar rico sin tocar el coche, duerme aquí.</p>
+<p><b>La zona arqueológica.</b> A pasos de la Pirámide y de su museo de sitio. Es la opción de quien viene por la historia y quiere amanecer con la vista del santuario sobre la pirámide. Del centro son minutos, pero el ambiente es más de visita que de vida de pueblo.</p>
+<p><b>Zerezotla.</b> La zona residencial al sur del centro, donde están los salones grandes del Complejo Zerezotla. Si tu evento es ahí, dormir en el centro te deja a unos 10 minutos en coche: cerca para ir y venir, con el pueblo a la mano para el día siguiente.</p>
+<p><b>San Andrés Cholula.</b> El otro centro, con su propia parroquia y un ambiente más universitario y de vida nocturna. Buena opción para grupos jóvenes; para un plan familiar o de evento, San Pedro suele rendir más.</p>
+
+<h2>Las distancias que sí importan</h2>
+<ul>
+<li>De Los Portales a la Gran Pirámide: ~800 metros, 12 minutos caminando.</li>
+<li>Del Complejo Zerezotla al centro: ~5 km, unos 10 minutos en coche.</li>
+<li>Del Salón Ardizana (Puebla) al centro de Cholula: ~25 minutos en coche.</li>
+<li>Del Salón Arcadia (Puebla) al centro de Cholula: ~30 minutos en coche.</li>
+</ul>
+<p>Traducción práctica: si tu evento es en Cholula, tus invitados pueden dormir en el centro y moverse sin logística complicada. Si es en Puebla, decide con tiempo si duermen allá o si el plan incluye el traslado.</p>
+
+<h2>Si vienes a un evento: el plan de invitados</h2>
+<p>Este es el punto que casi nadie busca en Google y el que más dolores de cabeza ahorra: <b>¿dónde duermen los invitados?</b> Quien organiza piensa en el salón, el banquete y la música; los invitados de fuera piensan en dónde van a caer rendidos a las 2 de la mañana. Resuélvelo tú antes de que cada quien improvise:</p>
+<ul>
+<li><b>Un solo hotel para todos.</b> Facilita el traslado, la convivencia del día siguiente y hasta el desayuno de recuento.</li>
+<li><b>Bloquea habitaciones con tiempo.</b> En fines de semana de alta demanda en Cholula (puentes, festivales, temporada de graduaciones) los cuartos céntricos vuelan.</li>
+<li><b>Piensa el regreso.</b> Del salón al hotel hay opciones de transporte para invitados; pregúntalo al cotizar tu evento, es de esos extras que valen oro a medianoche.</li>
+<li><b>La previa también se hospeda.</b> Una terraza para la reunión de bienvenida o una sala de juntas para los últimos pendientes convierte el hotel en la segunda sede de tu evento.</li>
+</ul>
+
+<h2>Mi recomendación, con interés declarado</h2>
+<p>Te lo digo de frente, porque soy la mascota de la casa: en Los Portales, frente al zócalo, está el <b>Hotel Santa Rosa</b>. Son 31 habitaciones temáticas, cada una inspirada en un estado de la República, y una terraza con vista de 360° de Cholula para el café de la mañana o el brindis de bienvenida. Tiene además el Salón Presidentes, una sala de juntas para 20 personas, por si tu evento trae sesiones de trabajo. Si tu celebración es en un salón del grupo, tus invitados duermen en el centro, con la Pirámide a una caminata y el salón a 10 minutos. Esa combinación (salón + hotel del mismo equipo) es justamente la que le ahorra a los anfitriones una semana de coordinación.</p>
+<p>¿Y el mobiliario de tu evento? También lo resolvemos en casa: te lo cuento en <a href="2026-11-22-renta-sillas-tiffany-mobiliario-puebla-cholula.html">la guía de renta de sillas Tiffany y mobiliario</a>.</p>
+
+
+    
+
+    <div class="cta-box reveal">
+      <h2>¿Vienes a Cholula o traes invitados?</h2>
+      <p>Cuéntanos tus fechas y cuántos vienen: el equipo del Hotel Santa Rosa te confirma disponibilidad y te ayuda con el plan de invitados. Manda la palabra HOTEL y te atendemos directo.</p>
+      <a class="cta" href="https://wa.me/522224300713?text=Hola%2C%20vi%20el%20blog%20de%20Don%20Rosendo%20y%20quiero%20informaci%C3%B3n%20del%20Hotel%20Santa%20Rosa"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4zM9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.8-2-1-1 1a5 5 0 0 1-2.7-2.7l1-1-1-2z"/></svg>Hotel Santa Rosa: 222 430 0713</a>
+    </div>
+
+    <div class="cta-box reveal">
+      <h2>La libreta, en tu correo</h2>
+      <p>Cada martes te mando el artículo de la semana a tu correo: un tip, una checklist o un dato real para tu evento. Sin spam.</p>
+      <a class="cta" href="../index.html#suscripcion"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6h17v12h-17zM3.8 6.8l8.2 5.7 8.2-5.7"/></svg>Suscribirme al newsletter</a>
+    </div>
+
+    <p><b>— Don Rosendo</b></p>
+  </article>
+  <a class="volver volver-bottom" href="../index.html">← Volver al inicio</a>
+</main>
+
+<footer>
+  <div class="footer-in">
+    La libreta de Don Rosendo · Un medio de <a href="https://www.instagram.com/grupo.santarosa">Grupo Santa Rosa</a> · Cholula y Puebla, México · <a href="../index.html">Volver a la portada</a>
+  </div>
+</footer>
+
+<script>
+  // Reveal al scroll: marca como visibles las secciones al entrar en pantalla.
+  (function(){
+    if(!document.documentElement.classList.contains('reveal-on')) return;
+    var io=new IntersectionObserver(function(entradas){
+      entradas.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+<a class="to-top" id="toTop" href="#top" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<script>
+  // Navegación: el header fijo se adelgaza al bajar y el botón «volver arriba»
+  // aparece tras ~600px. Sin JS, el header queda en su tamaño normal y el botón no aparece.
+  (function(){
+    var header=document.querySelector('header');
+    var boton=document.getElementById('toTop');
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function alBajar(){
+      var y=window.scrollY||window.pageYOffset;
+      if(header) header.classList.toggle('compacto', y>40);
+      if(boton) boton.classList.toggle('visible', y>600);
+    }
+    window.addEventListener('scroll', alBajar, {passive:true});
+    alBajar();
+    if(boton){
+      boton.addEventListener('click', function(e){
+        e.preventDefault();
+        window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+      });
+    }
+  })();
+</script>
+</body>
+</html>

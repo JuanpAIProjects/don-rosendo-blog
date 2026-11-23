@@ -1,1 +1,27 @@
-[{"fecha":"2026-11-20","lectura":"3 min","resumen":"Don Rosendo, la mascota de Grupo Santa Rosa, se presenta: tips honestos, checklists que sí sirven y los datos que nadie te cuenta antes de apartar tu salón en Cholula y Puebla.","tema":"Presentación","titulo":"Soy Don Rosendo: tu anfitrión para celebrar en Cholula y Puebla","url":"posts/2026-11-20-presentacion-don-rosendo.html","video":"assets/video/2026-11-20-presentacion-don-rosendo.mp4"}]
+[
+ {
+  "fecha": "2026-11-22",
+  "lectura": "5 min",
+  "resumen": "La guía práctica para rentar mobiliario sin sorpresas: Tiffany o Phoenix, qué debe incluir una renta seria y los errores que se pagan el día del evento.",
+  "tema": "Checklists",
+  "titulo": "Renta de sillas Tiffany y mobiliario para eventos en Puebla y Cholula: qué revisar antes de rentar",
+  "url": "posts/2026-11-22-renta-sillas-tiffany-mobiliario-puebla-cholula.html"
+ },
+ {
+  "fecha": "2026-11-22",
+  "lectura": "5 min",
+  "resumen": "Qué zona de Cholula te conviene según tu plan, distancias reales a la Gran Pirámide y el plan para hospedar a los invitados de tu evento sin improvisar.",
+  "tema": "Hotel",
+  "titulo": "Dónde hospedarte en Cholula: zonas, distancias a la Pirámide y el plan para tus invitados",
+  "url": "posts/2026-11-22-donde-hospedarte-en-cholula.html"
+ },
+ {
+  "fecha": "2026-11-20",
+  "lectura": "3 min",
+  "resumen": "Don Rosendo, la mascota de Grupo Santa Rosa, se presenta: tips honestos, checklists que sí sirven y los datos que nadie te cuenta antes de apartar tu salón en Cholula y Puebla.",
+  "tema": "Presentación",
+  "titulo": "Soy Don Rosendo: tu anfitrión para celebrar en Cholula y Puebla",
+  "url": "posts/2026-11-20-presentacion-don-rosendo.html",
+  "video": "assets/video/presentacion-don-rosendo-v6.mp4"
+ }
+]
